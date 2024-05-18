@@ -1,34 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Tip calculator app</title>
-</head>
-<body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- displays site properly based on user's device -->
+      <link rel="stylesheet" href="css/style.css" />
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png" />
+      <title>Frontend Mentor | Tip calculator app</title>
+   </head>
+   <body>
+      <main class="content">
+         <figure class="logo">
+            <img src="images/logo.svg" alt="logo spliter" />
+         </figure>
+         <article class="tip-calculator">
+            <section class="tip-calculator__settings">
+               <form class="form">
+                  <div class="form__group">
+                     <label class="form__label" for="bill">Bill</label>
+                     <span class="error-text hidden">Can't be zero</span>
+                     <div class="input-box">
+                        <img
+                           class="input-box__icon"
+                           src="images/icon-dollar.svg"
+                           alt="dollar sign icon" />
+                        <input
+                           id="bill"
+                           type="text"
+                           class="form__input"
+                           placeholder="0" />
+                     </div>
+                  </div>
 
-  Bill
+                  <div class="form__group">
+                     <label class="form__label">Select Tip %</label>
+                     <div class="select-tip">
+                        <input
+                           class="select-tip__input"
+                           type="button"
+                           value="5%" />
+                        <input
+                           class="select-tip__input"
+                           type="button"
+                           value="10%" />
+                        <input
+                           class="select-tip__input"
+                           type="button"
+                           value="15%" />
+                        <input
+                           class="select-tip__input"
+                           type="button"
+                           value="25%" />
+                        <input
+                           class="select-tip__input"
+                           type="button"
+                           value="50%" />
+                        <input
+                           class="select-tip__input select-tip__input--custom"
+                           type="text"
+                           placeholder="Custom" />
+                     </div>
+                  </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+                  <div class="form__group">
+                     <label class="form__label" for="person"
+                        >Number of People</label
+                     >
+                     <span class="error-text hidden">Can't be zero</span>
+                     <div class="input-box">
+                        <img
+                           class="input-box__icon"
+                           src="images/icon-person.svg"
+                           alt="dollar sign icon" />
+                        <input
+                           id="person"
+                           type="text"
+                           class="form__input"
+                           placeholder="0" />
+                     </div>
+                  </div>
+               </form>
+            </section>
 
-  Number of People
+            <section class="tip-calculator__results">
+               <div class="result">
+                  <div class="result__label">
+                     <h3 class="result__label__title">Tip Amount</h3>
+                     <span class="result__label__per-person">/ person</span>
+                  </div>
+                  <h2 class="result__value">$0.00</h2>
+               </div>
+               <div class="result">
+                  <div class="result__label">
+                     <h3 class="result__label__title">Total</h3>
+                     <span class="result__label__per-person">/ person</span>
+                  </div>
+                  <h2 class="result__value">$0.00</h2>
+               </div>
+               <button class="btn">Reset</button>
+            </section>
+            
+         </article>
+      </main>
 
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <script src="script.js"></script>
-</body>
+      <script src="script.js"></script>
+   </body>
 </html>

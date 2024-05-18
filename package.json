@@ -1,0 +1,12 @@
+{
+  "name": "tip-calculator-app-main",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "script.js",
+  "scripts": {
+    "sass": "sass sass/style.scss css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
