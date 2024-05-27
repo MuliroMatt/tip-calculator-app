@@ -39,28 +39,19 @@
                   <div class="form__group">
                      <label class="form__label">Select Tip %</label>
                      <div class="select-tip">
+                        <input class="select-tip__input" type="radio" name="tip" value="0.05" id="tip5" />
+                        <label class="select-tip__option" for="tip5"> 5% </label>
+                        <input class="select-tip__input" type="radio" name="tip" value="0.1" id="tip10" />
+                        <label class="select-tip__option" for="tip10"> 10% </label>
+                        <input class="select-tip__input" type="radio" name="tip" value="0.15" id="tip15" />
+                        <label class="select-tip__option" for="tip15"> 15% </label>
+                        <input class="select-tip__input" type="radio" name="tip" value="0.25" id="tip25" />
+                        <label class="select-tip__option" for="tip25"> 25% </label>
+                        <input class="select-tip__input" type="radio" name="tip" value="0.5" id="tip50" />
+                        <label class="select-tip__option" for="tip50"> 50% </label>
+
                         <input
-                           class="select-tip__input"
-                           type="button"
-                           value="5%" />
-                        <input
-                           class="select-tip__input"
-                           type="button"
-                           value="10%" />
-                        <input
-                           class="select-tip__input"
-                           type="button"
-                           value="15%" />
-                        <input
-                           class="select-tip__input"
-                           type="button"
-                           value="25%" />
-                        <input
-                           class="select-tip__input"
-                           type="button"
-                           value="50%" />
-                        <input
-                           class="select-tip__input select-tip__input--custom"
+                           class="select-tip__option select-tip__option--custom"
                            type="text"
                            placeholder="Custom" />
                      </div>
@@ -92,18 +83,17 @@
                      <h3 class="result__label__title">Tip Amount</h3>
                      <span class="result__label__per-person">/ person</span>
                   </div>
-                  <h2 class="result__value">$0.00</h2>
+                  <h2 class="result__value tip-amount">$0.00</h2>
                </div>
                <div class="result">
                   <div class="result__label">
                      <h3 class="result__label__title">Total</h3>
                      <span class="result__label__per-person">/ person</span>
                   </div>
-                  <h2 class="result__value">$0.00</h2>
+                  <h2 class="result__value total">$0.00</h2>
                </div>
                <button class="btn">Reset</button>
             </section>
-            
          </article>
       </main>
 

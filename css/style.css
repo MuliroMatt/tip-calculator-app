@@ -35,7 +35,7 @@ body {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   width: 100%;
-  max-width: 375px;
+  max-width: 920px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -94,19 +94,27 @@ body {
   margin-top: 1rem;
 }
 .select-tip__input {
+  display: none;
+}
+.select-tip__input:checked + .select-tip__option {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.select-tip__option {
   background-color: hsl(183, 100%, 15%);
   border: none;
   color: hsl(0, 0%, 100%);
   border-radius: 4px;
   padding: 6px 0;
   font-size: 1.5rem;
+  text-align: center;
   cursor: pointer;
 }
-.select-tip__input:hover {
+.select-tip__option:hover {
   color: hsl(183, 100%, 15%);
   background-color: hsl(173, 61%, 77%);
 }
-.select-tip__input--custom {
+.select-tip__option--custom {
   width: 100%;
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
@@ -115,10 +123,10 @@ body {
   caret-color: hsl(172, 67%, 45%);
   cursor: text;
 }
-.select-tip__input--custom:focus {
+.select-tip__option--custom:focus {
   outline: 2px solid hsl(172, 67%, 45%);
 }
-.select-tip__input--custom:hover {
+.select-tip__option--custom:hover {
   background-color: hsl(189, 41%, 97%);
 }
 
@@ -171,6 +179,43 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media screen and (min-height: 900px) {
+  .tip-calculator {
+    border-radius: 24px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .tip-calculator {
+    width: 90%;
+    border-radius: 24px;
+  }
+  .select-tip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .tip-calculator {
+    flex-direction: row;
+    padding: 2.5rem 2rem 2rem 2.5rem;
+    gap: 3.25rem;
+  }
+  .tip-calculator__settings, .tip-calculator__results {
+    width: 50%;
+  }
+  .tip-calculator .form {
+    gap: 2.5rem;
+  }
+  .tip-calculator__results {
+    padding: 2.25rem 2.5rem 1.5rem 1.5rem;
+  }
+  .tip-calculator__results .result__value {
+    font-size: 3rem;
+  }
+  .btn {
+    margin-top: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

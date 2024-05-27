@@ -11,7 +11,7 @@
 }
 
 .logo {
-    margin: 2rem 0;
+   margin: 2rem 0;
 }
 
 .tip-calculator {
@@ -21,143 +21,192 @@
    border-bottom-left-radius: 0;
    border-bottom-right-radius: 0;
    width: 100%;
-   max-width: 375px;
+   max-width: 920px;
    display: flex;
    flex-direction: column;
    gap: 1.5rem;
    &__settings {
       padding: 0.5rem;
    }
-   .form{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+   .form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
    }
 }
 
-.form__label{
-    color: $Darkgrayishcyan;
+.form__label {
+   color: $Darkgrayishcyan;
 }
-.input-box{
-    background-color: $Verylightgrayishcyan;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 4px;
-    position: relative;
-    margin-top: .5rem;
-    &__icon{
-        position: absolute;
-        left: 20px;
-    }
-    .form__input{
-        padding: 6px 20px;
-        border: none;
-        background: none;
-        width: 100%;
-        outline: none;
-        caret-color: $Strongcyan;
-        text-align: right;
-        font-size: 24px;
-        color: $Verydarkcyan;
-        border-radius: 4px;
-        &:focus{
+.input-box {
+   background-color: $Verylightgrayishcyan;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-radius: 4px;
+   position: relative;
+   margin-top: 0.5rem;
+   &__icon {
+      position: absolute;
+      left: 20px;
+   }
+   .form__input {
+      padding: 6px 20px;
+      border: none;
+      background: none;
+      width: 100%;
+      outline: none;
+      caret-color: $Strongcyan;
+      text-align: right;
+      font-size: 24px;
+      color: $Verydarkcyan;
+      border-radius: 4px;
+      &:focus {
+         outline: 2px solid $Strongcyan;
+      }
+   }
+}
+
+.error-text {
+   color: $Red;
+   float: right;
+}
+
+.select-tip {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1rem;
+   margin-top: 1rem;
+   &__input{
+      display: none;
+      &:checked + .select-tip__option{
+         background-color: $Strongcyan;
+         color: $Verydarkcyan;
+      }
+   }
+   &__option {
+      background-color: $Verydarkcyan;
+      border: none;
+      color: $White;
+      border-radius: 4px;
+      padding: 6px 0;
+      font-size: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+         color: $Verydarkcyan;
+         background-color: $Lightcyan;
+      }
+      &--custom {
+         width: 100%;
+         background-color: $Verylightgrayishcyan;
+         color: $Verydarkcyan;
+         padding: 0 1rem;
+         text-align: center;
+         caret-color: $Strongcyan;
+         cursor: text;
+         &:focus {
             outline: 2px solid $Strongcyan;
-        }
-    }
-}
-
-.error-text{
-    color: $Red;
-    float: right;
-}
-
-
-.select-tip{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 1rem;
-    &__input{
-        background-color: $Verydarkcyan;
-        border: none;
-        color: $White;
-        border-radius: 4px;
-        padding: 6px 0;
-        font-size: 1.5rem;
-        cursor: pointer;
-        &:hover{
-            color: $Verydarkcyan;
-            background-color: $Lightcyan;
-        }
-        &--custom{
-            width: 100%;
+         }
+         &:hover {
             background-color: $Verylightgrayishcyan;
-            color: $Verydarkcyan;
-            padding: 0 1rem;
-            text-align: center;
-            caret-color: $Strongcyan;
-            cursor: text;
-            &:focus{
-                outline: 2px solid $Strongcyan;
-            }
-            &:hover{
-                background-color: $Verylightgrayishcyan;
-            }
-        }
-    }
+         }
+      }
+   }
 }
 
-.tip-calculator__results{
-    background-color: $Verydarkcyan;
-    border-radius: 16px;
-    padding: 2.25rem 1.5rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    .result{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        &__label{
-            &__title{
-                font-size: 1rem;
-                color: $White;
-                line-height: 100%;
-                // background-color: blue;
-            }
-            &__per-person{
-                font-size: .813rem;
-                color: $Darkgrayishcyan;
-            }
-        }
-        &__value{
-            color: $Strongcyan;
-            font-size: 2rem;
-        }
-    }
+.tip-calculator__results {
+   background-color: $Verydarkcyan;
+   border-radius: 16px;
+   padding: 2.25rem 1.5rem 1.5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+   .result {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__label {
+         &__title {
+            font-size: 1rem;
+            color: $White;
+            line-height: 100%;
+            // background-color: blue;
+         }
+         &__per-person {
+            font-size: 0.813rem;
+            color: $Darkgrayishcyan;
+         }
+      }
+      &__value {
+         color: $Strongcyan;
+         font-size: 2rem;
+      }
+   }
 }
 
-.btn{
-    background-color: $Notsodarkcyan;
-    border: none;
-    border-radius: 4px;
-    color: $Verydarkcyan;
-    font-size: 1.25rem;
-    padding: 8px;
-    text-transform: uppercase;
-    width: 100%;
-    cursor: not-allowed;
-    &--active{
-        background-color: $Strongcyan;
-        color: $Verydarkcyan;
-        cursor: pointer;
-        &:hover{
-            background-color: $Lightgrayishcyan;
-        }
-    }
+.btn {
+   background-color: $Notsodarkcyan;
+   border: none;
+   border-radius: 4px;
+   color: $Verydarkcyan;
+   font-size: 1.25rem;
+   padding: 8px;
+   text-transform: uppercase;
+   width: 100%;
+   cursor: not-allowed;
+   &--active {
+      background-color: $Strongcyan;
+      color: $Verydarkcyan;
+      cursor: pointer;
+      &:hover {
+         background-color: $Lightgrayishcyan;
+      }
+   }
 }
 
-.hidden{
-    display: none;
+.hidden {
+   display: none;
+}
+
+@media screen and (min-height: 900px) {
+   .tip-calculator {
+      border-radius: 24px;
+   }
+}
+
+@media screen and (min-width: 600px) {
+   .tip-calculator {
+      width: 90%;
+      border-radius: 24px;
+   }
+   .select-tip {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media screen and (min-width: 768px) {
+   .tip-calculator {
+      flex-direction: row;
+      padding: 2.5rem 2rem 2rem 2.5rem;
+      gap: 3.25rem;
+      &__settings,
+      &__results {
+         width: 50%;
+      }
+      .form {
+         gap: 2.5rem;
+      }
+      &__results {
+         padding: 2.25rem 2.5rem 1.5rem 1.5rem;
+         .result {
+            &__value {
+               font-size: 3rem;
+            }
+         }
+      }
+   }
+   .btn {
+      margin-top: auto;
+   }
 }
